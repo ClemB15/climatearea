@@ -1,0 +1,22 @@
+$MOBILE : "576px";
+$TABLET : "992px";
+$DESKTOP : "1200px";
+$MENU : $TABLET;
+$COULEUR : #0000ff;
+$COULEURFONCE : darken($COULEUR, 40%);
+$COULEURCLAIR : lighten($COULEUR, 25%);
+
+.centrertout{
+  color: $COULEURFONCE;
+  font-size: 3em;
+  height: 100vh;
+  @extend %flex_center;
+}
+
+html, body {
+  height: 100%
+}
+
+h2 {
+  text-align: center
+}

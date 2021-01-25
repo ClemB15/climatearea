@@ -1,0 +1,61 @@
+nav.barrnav {
+  display: flex;
+  flex-direction: row-reverse;
+  color: $COULEUR;
+  font-size: 2em;
+
+  #menutoggle{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  li {
+    list-style-type: none;
+    margin: 5px;
+    a{
+      padding: 5px;
+      display: inline-block;
+    }
+    a:hover{
+      text-decoration: none;
+      background-color: $COULEURFONCE;
+      color: $COULEURCLAIR ;
+    }
+  }
+
+  #burger{
+    opacity: 0;
+  }
+  label {
+    display: inline-block;
+    color: black;
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .navdesktop{
+    display: none;
+
+  }
+  input:checked ~ .navdesktop {
+    display: block;
+
+  }
+}
+
+@media screen and (min-width: $MENU) {
+  nav.barrnav {
+    li {
+      display: inline;
+    }
+    #burger{
+      display: none;
+    }
+    label {
+      display: none;
+    }
+    .navdesktop{
+      display: block;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
